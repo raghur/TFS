@@ -57,6 +57,7 @@ elseif(filereadable(s:pfiles.'\Microsoft Visual Studio 8\Common7\IDE\TF.exe'))
     let s:tfs_tf='"'.s:pfiles.'\Microsoft Visual Studio 8\Common7\IDE\TF.exe"'
     let s:tfs_recurse_command='/followbranches'
 endif
+let s:tfs_tf=fnamemodify(expand("$VS100COMNTOOLS../IDE/TF.EXE"), ":8")
 if (filereadable(s:pfiles.'\Microsoft Team Foundation Server 2010 Power Tools\TFPT.exe'))
     let s:tfs_tfpt='"'.s:pfiles.'\Microsoft Team Foundation Server 2010 Power Tools\TFPT.exe"'
 elseif (filereadable(s:pfiles.'\Microsoft Team Foundation Server 2008 Power Tools\TFPT.exe'))
